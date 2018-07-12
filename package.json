@@ -1,0 +1,69 @@
+{
+  "name": "sqs-worker-pool",
+  "version": "0.0.1",
+  "description": "Manager for worker pools for AWS SQS",
+  "main": "src/ConsumerManagerService.js",
+  "scripts": {
+    "precommit": "npm run lint",
+    "prepush": "npm run lint && npm test",
+    "prepublish": "npm run lint && npm test",
+    "lint": "eslint src",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "tdd": "ava --watch",
+    "build": "SCRIPTY_SILENT=true scripty",
+    "test": "ava -s -T 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/royhp/sqs-worker-pool.git"
+  },
+  "keywords": [
+    "AWS",
+    "SQS",
+    "consumer"
+  ],
+  "files": [
+    "src"
+  ],
+  "author": "Roy Hill-Percival",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/royhp/sqs-worker-pool/issues"
+  },
+  "homepage": "https://github.com/royhp/sqs-worker-pool#readme",
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "escope": "^3.6.0",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-pichak": "^1.1.2",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-ava": "^4.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "nyc": "^11.0.3",
+    "scripty": "^1.7.1",
+    "sinon": "^2.3.7",
+    "sinon-bluebird": "^3.1.0",
+    "chance": "^1.0.11"
+  },
+  "nyc": {
+    "cache": true
+  },
+  "ava": {
+    "source": [
+      "src/**/*.js"
+    ],
+    "files": [
+      "tests/**/*.test.js"
+    ]
+  },
+  "dependencies": {
+    "aws-sdk": "^2.82.0",
+    "bluebird": "^3.5.0",
+    "dotenv": "^4.0.0"
+  }
+}
