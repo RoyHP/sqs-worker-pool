@@ -5,8 +5,8 @@
   "main": "src/ConsumerManagerService.js",
   "scripts": {
     "precommit": "npm run lint",
-    "prepush": "npm run lint && npm test",
-    "prepublish": "npm run lint && npm test",
+    "prepublishOnly-noop": "npm run lint && npm test",
+    "prepare-noop": "npm run lint && npm test",
     "lint": "eslint src",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "tdd": "ava --watch",
