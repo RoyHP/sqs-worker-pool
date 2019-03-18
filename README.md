@@ -3,7 +3,7 @@ Consumers for AWS SQS - Promise based
 
 ## Description
 
-Create a pool of consumers to consume many messages/jobs at once and increase concurrency. You can scale the number of consumers up and down easily. This package was created after reviewing the inner workings of [sqs-consumer](https://www.npmjs.com/package/sqs-consumer). 
+Create a pool of consumers to consume many messages/jobs at once and increase concurrency. You can scale the number of consumers up and down easily. This package was created after reviewing the inner workings of [sqs-consumer](https://www.npmjs.com/package/sqs-consumer) and [aws-sqs-consumer](https://www.npmjs.com/package/aws-sqs-consumer). 
 
 ## Getting Started
 
